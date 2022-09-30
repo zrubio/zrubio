@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" class="app-toolbar mat-toolbar mat-primary">
+	<mat-toolbar-row class="mat-toolbar-row">
+
+		<button mat-button [matMenuTriggerFor]="menu">
+         Menu
+    </button>
+		<mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/">Home</button>
+			<button mat-menu-item routerLink="/about">About</button>
+			<button mat-menu-item routerLink="/contact" disabled="false">Contact</button>
+		</mat-menu>
+
+	</mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>

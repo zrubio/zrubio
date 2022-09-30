@@ -1,0 +1,28 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>
+			<h3>Contact form</h3>
+		</mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<form #form="ngForm" 
+      (ngSubmit)="contactForm(form.value)" class="mat-card-contact-form">
+			<mat-form-field>
+				<input matInput ngModel  type="text" 
+               placeholder="Name" name="nombre" required autocomplete="name">
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput ngModel type="email" 
+          placeholder="Email" name="email" required autocomplete="email">
+			</mat-form-field>
+			<mat-form-field>
+				<textarea matInput ngModel type="textarea" 
+            placeholder="Comment" name="mensaje" required
+            autocomplete="comment"></textarea>
+			</mat-form-field>
+			<button mat-raised-button type="submit" color="primary">
+        Send
+  </button>
+		</form>
+	</mat-card-content>
+</mat-card>

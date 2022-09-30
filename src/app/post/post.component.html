@@ -1,0 +1,44 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title >Posts</mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+
+		<mat-form-field>
+			<input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+		</mat-form-field>
+
+		<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+			<ng-container matColumnDef="id">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+				<td mat-cell *matCellDef="let post">
+					<a [routerLink]="['/post-detail/', post.id, post.userId]">
+						{{post.id}}
+					</a>
+				</td>
+			</ng-container>
+
+
+				<ng-container matColumnDef="title">
+					<th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+					<td mat-cell *matCellDef="let post"> {{post.title}} </td>
+				</ng-container>
+
+			<ng-container matColumnDef="userId">
+				<th mat-header-cell *matHeaderCellDef mat-sort-header> userI d </th>
+				<td mat-cell *matCellDef="let post">
+					<a [routerLink]="['/user-detail/', post.userId]">
+						{{post.userId}}
+					</a>
+				</td>
+			</ng-container>
+
+			<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+			<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+		</table>
+
+		<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+	</mat-card-content>
+</mat-card>

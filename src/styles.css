@@ -1,0 +1,21 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.app-toolbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.app-toolbar-footer {
+    position: fixed;
+    position: -webkit-sticky;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.footer-toolbar-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}

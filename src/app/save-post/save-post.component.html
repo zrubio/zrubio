@@ -1,0 +1,14 @@
+<div class="example-container">
+	<mat-form-field>
+		<input matInput placeholder="Title">
+	</mat-form-field>
+	<mat-form-field>
+		<input matInput placeholder="Body">
+	</mat-form-field>
+	<mat-form-field>
+		<mat-select placeholder="Select">
+			<mat-option *ngFor="let user of users" [value]="user.id">{{user.name}}</mat-option>
+		</mat-select>
+	</mat-form-field>
+	<button mat-button>Send</button>
+</div>

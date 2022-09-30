@@ -1,0 +1,19 @@
+.angular-image-header {
+  background-image: url('https://png.icons8.com/color/50/000000/angularjs.png');
+  background-size: cover;
+}
+
+.js-image-header {
+  background-image: url('https://png.icons8.com/nolan/50/000000/js.png');
+  background-size: cover;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+.tools-image-header {
+  background-image: url('https://png.icons8.com/nolan/50/000000/toolbox.png');
+  background-size: cover;
+}
