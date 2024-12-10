@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { PhotoComponent } from './photo/photo.component';
 import { PhotoDetailComponent } from './photo-detail/photo-detail.component';
 import { PostComponent } from './post/post.component';
@@ -80,6 +79,7 @@ import { ContactService } from './services/contact.service';
 import { OopjsComponent } from './oopjs/oopjs.component';
 import { ApiComponent } from './api/api.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   imports: [
@@ -128,7 +128,6 @@ import { TopBarComponent } from './top-bar/top-bar.component';
   ],
   declarations: [
     AppComponent,
-    DashboardComponent,
     PhotoComponent,
     PhotoDetailComponent,
     PostComponent,
@@ -145,6 +144,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     OopjsComponent,
     ApiComponent,
     TopBarComponent,
+    HeaderComponent,
   ],
   bootstrap: [AppComponent],
   providers: [
