@@ -7,8 +7,6 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PhotoComponent } from './photo/photo.component';
@@ -65,7 +63,6 @@ import {
 } from '@angular/material';
 import { SavePostComponent } from './save-post/save-post.component';
 
-
 /**
  * Custom services
  */
@@ -82,10 +79,10 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactService } from './services/contact.service';
 import { OopjsComponent } from './oopjs/oopjs.component';
 import { ApiComponent } from './api/api.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 @NgModule({
-  imports:
-  [
+  imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -127,10 +124,9 @@ import { ApiComponent } from './api/api.component';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
   ],
-  declarations:
-  [
+  declarations: [
     AppComponent,
     DashboardComponent,
     PhotoComponent,
@@ -147,21 +143,17 @@ import { ApiComponent } from './api/api.component';
     AboutComponent,
     ContactComponent,
     OopjsComponent,
-    ApiComponent
+    ApiComponent,
+    TopBarComponent,
   ],
-  bootstrap:
-  [
-    AppComponent
-  ],
-  providers:
-  [
+  bootstrap: [AppComponent],
+  providers: [
     MessageService,
     PhotoService,
     PostService,
     UserService,
     ContactService,
-    FormBuilder
-  ]
+    FormBuilder,
+  ],
 })
-
-export class AppModule { }
+export class AppModule {}
